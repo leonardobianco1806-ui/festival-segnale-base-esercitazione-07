@@ -24,14 +24,23 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Alte Haas Grotesk";
+  src: url("assets/fonts/AlteHaasGroteskBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+
 /* Valori condivisi: le regole interessate li richiamano con var(). */
 :root {
-  --colore-primario: #c2c6ca;
-  --colore-primario-scuro: #6a85a2;
+  --colore-primario: #010182;
+  --colore-primario-scuro: #da1fd3;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #292029;
   --font-testo: Rubik, Helvetica, sans-serif;
-  /* Scegli un font: "Merauq Expanded", "Redaction 50 Bold" o "Honfleur Heavy". */
+  /* Scegli un font: "Merauq Expanded", "Redaction 50 Bold", "Honfleur Heavy" o "Alte Haas Grotesk". */
   --font-titoli: "Honfleur Heavy", Georgia, "Times New Roman", serif;
 }
 
@@ -56,6 +65,8 @@ a:hover {
   text-decoration: underline;
 }
 
+
+
 a:focus {
   outline: 3px solid var(--colore-testo);
 }
@@ -72,25 +83,44 @@ a:focus {
   z-index: 10;
   padding: 1.25rem 0;
   border-bottom: 0cm solid var(--colore-primario);
-  background: #081ec1;
-  box-shadow: 0 10px 8px rgba(104, 19, 184, 0.133);
+  background: #010182;
+  box-shadow: 0 10px 8px rgba(228, 77, 183, 0.133);
 }
 
 .brand {
   display: inline-block;
-  color:#f73ef4;
-  font-size: 4rem;
+  color:#f5f2e9;
+  font-size: 5rem;
   font-weight: bold;
   line-height: 1.2;
   text-decoration: none;
   font-family: "Honfleur Heavy";
 }
 
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand:hover .brand-name {
+  text-decoration: underline;
+  text-decoration-color: #f5f2e9;
+}
+
+.brand:hover > span:not(.brand-name) {
+  text-decoration: underline;
+  text-decoration-color: #da1fd3;
+}
+
 .brand span {
   display: block;
+  color:#da1fd3;
   margin-top: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: normal;
+  brand:hover {
+  text-decoration: underline;
+  text-decoration-color: #da1fd3;
+  } 
 }
 
 nav {
@@ -98,22 +128,24 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.25rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
   display: block;
   padding: 0.25rem 0;
+  color:#ffffff;
 }
 
 
 .intro {
   padding: 3rem 0 1rem;
+  
 }
 
 .eyebrow,
 .event-meta {
-  color: #46564b;
+  color: #da1fd3;
   font-size: 0.875rem;
   font-weight: bold;
 }
@@ -143,6 +175,7 @@ h3 {
 .lead {
   max-width: 48ch;
   font-size: 1.25rem;
+  
 }
 
 .reading-text {
@@ -155,7 +188,8 @@ h3 {
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
   background: var(--colore-primario);
-  color: #ffffff;
+  color: #f5f2e9;
+  border: 3px solid #010182;
   font-weight: bold;
   text-decoration: none;
 }
@@ -194,9 +228,9 @@ h3 {
 
 .event-card {
   overflow: hidden;
-  border: 1px solid #b7c0b7;
+  border: 3px solid #010182;
   border-radius: 0.75rem;
-  background: #ffffff;
+  background: #f5f2e9;
 }
 
 .event-card img {
@@ -211,15 +245,16 @@ h3 {
 
 .event-place {
   margin-bottom: 0;
-  color: #46564b;
+  color: #da1fd3;
   font-size: 0.875rem;
 }
 
 .site-footer {
-  padding: 1.25rem 0;
-  border-top: 1px solid #b7c0b7;
-  color: #46564b;
-  font-size: 0.875rem;
+  padding: 0.875rem 0;
+  color: #f5f2e9;
+  background: #010182;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .skip-link {
@@ -287,7 +322,7 @@ button:focus {
 .venue-slide {
   margin: 0;
   overflow: hidden;
-  border: 1px solid #b7c0b7;
+  border: 3px solid #010182;
   border-radius: 0.75rem;
   background: #ffffff;
 }
@@ -323,7 +358,7 @@ button:focus {
 .map-container {
   margin: 1.5rem 0;
   overflow: hidden;
-  border: 1px solid #b7c0b7;
+  border: 3px solid #010182;
   border-radius: 0.75rem;
   background: #ffffff;
 }
@@ -343,7 +378,7 @@ button:focus {
 
 .venue-address {
   padding: 1.25rem;
-  border: 1px solid #b7c0b7;
+  border: 3px solid #010182;
   border-radius: 0.75rem;
 }
 
