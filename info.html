@@ -26,6 +26,20 @@
       <p class="lead">Scopri gli spazi e trova il tuo prossimo appuntamento.</p>
       <p class="reading-text">In questo progetto didattico, gli spazi immaginari di Segnale sono associati a tre sedi reali del Politecnico di Torino. Fotografie, indirizzi e mappa ti aiutano a riconoscerle e localizzarle.</p>
     </section>
+    <section class="content-section" aria-labelledby="titolo-meteo">
+      <p class="eyebrow">Torino adesso</p>
+      <h2 id="titolo-meteo">Meteo a Torino adesso</h2>
+      <p id="meteo-stato" class="reading-text" role="status" aria-live="polite">Caricamento dei dati meteo...</p>
+      <div id="meteo-dati" class="event-card" hidden>
+        <div class="event-body">
+          <p><strong>Temperatura:</strong> <span id="meteo-temperatura"></span></p>
+          <p><strong>Vento:</strong> <span id="meteo-vento"></span></p>
+          <p><strong>Ora del dato:</strong> <time id="meteo-ora"></time></p>
+        </div>
+      </div>
+      <p class="reading-text">Il meteo è quello attuale, non rispecchia le condizioni meteo previste per i giorni festival.</p>
+      <p class="reading-text">Dati meteo: <a href="https://open-meteo.com/">Open-Meteo</a>, licenza <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+    </section>
     <section class="content-section">
       <p class="eyebrow">Scopri le sedi</p>
       <h2 id="titolo-galleria">Spazi diversi, idee che si incontrano.</h2>
@@ -90,5 +104,6 @@
   <footer class="site-footer"><div class="container"><p>Segnale · Progetto didattico · Festival immaginario</p></div></footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"></script>
   <script src="galleria.js"></script>
+  <script src="meteo.js"></script>
 </body>
 </html>
