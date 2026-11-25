@@ -35,7 +35,7 @@ Questo punto è facoltativo: se lo salti, la consegna riguarda soltanto il Progr
 Il browser non può leggere direttamente il feed RSS di un altro sito (CORS, lezione 7). Lo legge Google: aggiungi una scheda `notizie`, scrivi `titolo`, `link` e `data` nelle celle A1, B1 e C1, poi questa formula in A2. Prende le ultime cinque notizie del feed di ANSA Piemonte e ne tiene titolo, collegamento e data, che riempiono da sole le colonne A, B e C:
 
 ```text
-=CHOOSECOLS(IMPORTFEED("https://www.ansa.it/piemonte/notizie/piemonte_rss.xml";"items";FALSO;5);1;2;3)
+=CHOOSECOLS(IMPORTFEED("https://www.ansa.it/piemonte/notizie/piemonte_rss.xml","items",FALSE,5),1;2,3)
 ```
 
 Incolla la formula con **Ctrl+Maiusc+V** (**Cmd+Maiusc+V** su Mac): così non copi anche colori e caratteri dell’editor. Se compare `#REF!`, fai clic sulla cella e scegli **Consenti l’accesso**. Non scrivere nulla in B2 e C2: se una cella è occupata, la formula non può riempirla e mostra un errore. Se il tuo foglio è in inglese, separa con `,` invece di `;` e scrivi `FALSE` invece di `FALSO`.

@@ -219,6 +219,36 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
+.news-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.news-item {
+  padding: 1.25rem;
+  border: 3px solid var(--colore-primario);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.news-date {
+  color: #292029;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.news-item h3 {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+}
+
+.news-source {
+  font-size: 0.875rem;
+}
+
 /* Disposizione di base: una colonna. */
 .event-grid {
   display: grid;
@@ -279,6 +309,10 @@ h3 {
   }
 
   .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -35,6 +35,14 @@
       <img class="festival-image" src="assets/festival.svg" alt="Composizione geometrica di cerchi e rettangoli nei colori del festival" width="1200" height="600">
     </section>
 
+    <section class="content-section" aria-labelledby="titolo-notizie">
+      <p class="eyebrow">Aggiornamenti dal territorio</p>
+      <h2 id="titolo-notizie">Notizie da Torino</h2>
+      <p id="notizie-stato" class="reading-text" role="status" aria-live="polite">Caricamento delle notizie...</p>
+      <ol id="lista-notizie" class="news-list"></ol>
+      <p class="reading-text news-source">Notizie dal feed RSS di ANSA Piemonte. I contenuti appartengono ad ANSA.</p>
+    </section>
+
     <section class="content-section">
       <h2 id="titolo-luoghi">I luoghi</h2>
       <ul class="venues">
@@ -48,5 +56,7 @@
   </main>
 
   <footer class="site-footer"><div class="container"><p>Segnale · Progetto didattico · Festival immaginario</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="notizie.js"></script>
 </body>
 </html>

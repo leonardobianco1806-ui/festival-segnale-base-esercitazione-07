@@ -40,6 +40,9 @@ Chi cura il sito aggiorna gli eventi e le sedi nel foglio Google pubblicato sul 
 |---|---|---|
 | Evento | `eventi` | `https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=385698909&single=true&output=csv` |
 | Sede | `sedi` | `https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=954334914&single=true&output=csv` |
+| Notizia | `notizie` | `https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=317082574&single=true&output=csv` |
+
+La Home legge dalla scheda `notizie` i campi `titolo`, `link` e `data`, e mostra al massimo cinque notizie.
 
 ## Contenuto della pagina
 
