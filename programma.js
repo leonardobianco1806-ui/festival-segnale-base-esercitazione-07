@@ -1,12 +1,25 @@
 const eventGrid = document.querySelector('#event-grid');
 const programStatus = document.querySelector('#programma-stato');
 
-async function fetchJson(path) {
-  const response = await fetch(path);
-  if (!response.ok) {
-    throw new Error(`Impossibile leggere ${path}: ${response.status}`);
-  }
-  return response.json();
+const eventCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=385698909&single=true&output=csv';
+const venueCsvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=954334914&single=true&output=csv';
+
+function fetchCsv(url) {
+  return new Promise((resolve, reject) => {
+    Papa.parse(url, {
+      download: true,
+      header: true,
+      skipEmptyLines: true,
+      complete: (result) => {
+        if (result.errors.length > 0) {
+          reject(new Error(`Impossibile analizzare il CSV ${url}: ${result.errors[0].message}`));
+          return;
+        }
+        resolve(result.data);
+      },
+      error: (error) => reject(new Error(`Impossibile leggere il CSV ${url}: ${error.message}`)),
+    });
+  });
 }
 
 function formatEventDate(value) {
@@ -57,12 +70,12 @@ function createEventCard(event, venueById) {
 async function loadProgram() {
   try {
     const [events, venues] = await Promise.all([
-      fetchJson('dati/eventi.json'),
-      fetchJson('dati/sedi.json'),
+      fetchCsv(eventCsvUrl),
+      fetchCsv(venueCsvUrl),
     ]);
 
     if (!Array.isArray(events) || !Array.isArray(venues)) {
-      throw new Error('I file dei dati devono contenere elenchi JSON.');
+      throw new Error('I CSV devono contenere una riga di intestazione e righe di dati.');
     }
 
     if (events.length === 0) {

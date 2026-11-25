@@ -34,7 +34,12 @@ Il dataset completo comprende sei eventi e tre sedi.
 
 ## Aggiornamento e pubblicazione
 
-Chi cura il sito aggiorna gli eventi in `eventi.json` e le sedi in `sedi.json` nella repository, mantenendo gli ID e i riferimenti tra gli eventi e le sedi. Le modifiche vengono pubblicate aggiornando la repository e la relativa GitHub Pages.
+Chi cura il sito aggiorna gli eventi e le sedi nel foglio Google pubblicato sul web, mantenendo gli ID e i riferimenti tra gli eventi e le sedi. La pagina Programma legge le schede `eventi` e `sedi` dai rispettivi indirizzi CSV pubblicati; i file JSON e CSV nella repository restano copie di riferimento e non sono usati dalla pagina.
+
+| Entità | Scheda | Indirizzo CSV pubblicato |
+|---|---|---|
+| Evento | `eventi` | `https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=385698909&single=true&output=csv` |
+| Sede | `sedi` | `https://docs.google.com/spreadsheets/d/e/2PACX-1vTT7mjPCODsu9JvUBCJG2lm_aeAbIKtadAxZ0RzoVdmg4L4RnIanlsmNeaxy-eChpmn7EI8itrv8o7y/pub?gid=954334914&single=true&output=csv` |
 
 ## Contenuto della pagina
 
